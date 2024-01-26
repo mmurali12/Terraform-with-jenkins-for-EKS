@@ -54,7 +54,7 @@ pipeline{
             steps{
                script{
                 dir('EKS'){
-                    sh 'terraform $action apply --auto-approve'
+                    sh 'terraform $action --auto-approve'
                 }
                 } 
             }
