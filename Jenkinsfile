@@ -50,11 +50,11 @@ pipeline{
                 } 
             }
         }
-        stage('Applying for creating EKS Cluster using Terraform'){
+        stage('Applying for creating/destroy EKS Cluster using Terraform'){
             steps{
                script{
                 dir('EKS'){
-                    sh 'terraform apply --auto-approve'
+                    sh 'terraform $action apply --auto-approve'
                 }
                 } 
             }
